@@ -150,7 +150,7 @@ public class Universidad {
                ci = false;
            }
         }
-        
+        System.out.println("lista de alumnos"); 
         for(int i =0; i<listaAlumnos.size(); i++){
            System.out.println(listaAlumnos.get(i).mostrar());          
         }
@@ -173,18 +173,40 @@ public class Universidad {
         System.out.println("3)docente de planta");
         System.out.println("4)administrativo");
         b=xd.nextInt();
+        int d=0; 
         switch(b){
             case 1:
-                
+                d=d+1;
+                boolean aluca=true;
+            System.out.println("lista de alumnos"); 
+            for(int i =0; i<listaAlumnos.size(); i++){
+            System.out.println(listaAlumnos.get(i).mostrar());
+            }
+            while(aluca){
+                int num;
+                System.out.println("que alumno desea modificar");
+                num=xd.nextInt();
+                System.out.println();
+            
+            }
                break;
             case 2:
-                
+            System.out.println("lista de docentes catedraticos"); 
+            for(int x=0;x<ListaCatedra.size();x++){
+            System.out.println(ListaCatedra.get(x).mostrar());
+            }
                 break;
             case 3:
-                
+            System.out.println("lista de docentes de planta");
+            for(int y=0;y<ListaPlanta.size();){
+            System.out.println(ListaPlanta.get(y).mostrar());
+            }
                 break;
             case 4:
-                
+            System.out.println("lista de docentes de administrativos");
+            for(int z=0;z<ListaAdministrativo.size();){
+            System.out.println(ListaAdministrativo.get(z).mostrar());
+            }
                 break;
         }
         

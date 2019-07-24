@@ -36,6 +36,7 @@ public class Alumnos extends Personal{
     public void setSemestre(int semestre) {
         this.semestre = semestre;
     }
+
     
     
     

@@ -22,5 +22,13 @@ public class Catedratico extends Docente{
                 fechaInicio+"\t"+fechaFin;
         return resultado;
     }
+
+    public void setFechaInicio(String fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public void setFechaFin(String fechaFin) {
+        this.fechaFin = fechaFin;
+    }
     
 }
