@@ -1,9 +1,6 @@
+//Mauricio Vergara
+//Andres Olivero
 package universidad;
-
-/**
- *
- * @author cymaniatico
- */
 public abstract class Docente extends Personal{
     
     protected String profesion, asignatura;

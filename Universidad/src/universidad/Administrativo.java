@@ -1,9 +1,6 @@
 package universidad;
-
-/**
- *
- * @author cymaniatico
- */
+//Mauricio Veregara
+//Andres Olivero
 public class Administrativo extends Personal{
     
     private String cargo, fechaContrato;

@@ -8,55 +8,185 @@ import java.util.Scanner;
 public class Universidad {
 
     public static void main(String[] args) {
-        // TODO code application logic here
-        /*Alumnos a1, a2;
-        Administrativo ad1;
-        Catedratico c1;
-        Planta p1;*/
-        Scanner leer = new Scanner(System.in);
+ 
+        Scanner xd = new Scanner(System.in);
        ArrayList<Alumnos> listaAlumnos = new ArrayList();
        boolean ciclo = true;
        int decision=1;
+       int decisiondosen=1;
        while(ciclo){
+           
            String tipoDocumento,  documento,  apellidos, nombres, 
                    codigo,  facultad,  programa; 
            int edad, semestre; 
            boolean activo;
+           System.out.println("ingrese un alumno");
+           System.out.println("");
            System.out.println("Ingrese tipo de documento");
-           tipoDocumento  = leer.next();
+           tipoDocumento  = xd.next();
            System.out.println("Digite el documento:");
-           documento = leer.next();
+           documento = xd.next();
            System.out.println("Digite el nombre:");
-           nombres = leer.next();
+           nombres = xd.next();
            System.out.println("Digite el apellido:");
-           apellidos = leer.next();
+           apellidos = xd.next();
            System.out.println("Digite la edad:");
-           edad = leer.nextInt();
+           edad = xd.nextInt();
            System.out.println("Digite la facultad");
-           facultad = leer.next();
+           facultad = xd.next();
            System.out.println("Digite el programa:");
-           programa = leer.next();
+           programa = xd.next();
            System.out.println("Digite el semestre:");
-           semestre = leer.nextInt();
+           semestre = xd.nextInt();
            System.out.println("Digite el código:");
-           codigo = leer.next();
+           codigo = xd.next();
            
            listaAlumnos.add(new Alumnos(tipoDocumento, documento, apellidos, nombres, edad, true, codigo, facultad, programa, semestre));
            System.out.println("¿Desea seguir ingresando alumnos? (1=sí / 2=no)");
-           decision = leer.nextInt();
+           decision = xd.nextInt();
            if(decision == 2){
                ciclo = false;
            }
        }
        boolean cicl =true;
-       ArrayList<Docente> ListaDocenta = new ArrayList();
+       ArrayList<Catedratico> ListaCatedra = new ArrayList();
         while(cicl){
-            System.out.println("ecrbe algo");
-            ciclo=leer.hasNext();
+            String tipodocumento,documento,nombre,apellido,profecion,asignatura,fechainicio,fechafin;
+            boolean activo;
+            int edad;
+            System.out.println("ingrese un docente catedratico");
+           System.out.println("");
+            System.out.println("digite tipo de documento");
+            tipodocumento=xd.next();
+            System.out.println("digete documento");
+            documento=xd.next();
+            System.out.println("digite nombre");
+            nombre=xd.next();
+            System.out.println("digite apelido");
+            apellido=xd.next();
+            System.out.println("digite edad");
+            edad=xd.nextInt();
+            System.out.println("digite profecion");
+            profecion=xd.next();
+            System.out.println("digite asignatura");
+            asignatura=xd.next();
+            System.out.println("digite la fecha de inicio");
+            fechainicio=xd.next();
+            System.out.println("digite la fecha finalizacion");
+            fechafin=xd.next();
+            activo=true;
+            ListaCatedra.add(new Catedratico(tipodocumento,documento,apellido, nombre, edad, activo, profecion, asignatura, fechainicio, fechafin));
+            System.out.println("¿desea agrgar un docente catedratico mas? 1)si 2)no");
+            decisiondosen=xd.nextInt();
+             if(decisiondosen == 2){
+               cicl = false;
+           }
         }
-       for(int i =0; i<listaAlumnos.size(); i++){
-           System.out.println(listaAlumnos.get(i).mostrar());
-       }
+        ArrayList<Planta> ListaPlanta = new ArrayList();
+        boolean cic=true;
+        int desplan=1;
+        while(cic){
+        String tipodocumento,documento,nombre,apellido,profecion,asignatura,fechaContrato;
+        boolean activo=true;
+        int edad,cantproyec;
+        
+        System.out.println("ingrese un docente de planta");
+           System.out.println("");
+        System.out.println("digite tipo de documento");
+            tipodocumento=xd.next();
+            System.out.println("digete documento");
+            documento=xd.next();
+            System.out.println("digite nombre");
+            nombre=xd.next();
+            System.out.println("digite apelido");
+            apellido=xd.next();
+            System.out.println("digite edad");
+            edad=xd.nextInt();
+            System.out.println("digite profecion");
+            profecion=xd.next();
+            System.out.println("digite asignatura");
+            asignatura=xd.next();
+            System.out.println("digite la fecha de contrato");
+            fechaContrato=xd.next();
+            System.out.println("digite la cantidad de proyectos");
+            cantproyec=xd.nextInt();
+            
+            ListaPlanta.add(new Planta(tipodocumento, documento, apellido, nombre, edad, activo, profecion, asignatura, fechaContrato,cantproyec));
+             System.out.println("¿desea agregar un docente de planta mas? 1)si 2)no");
+            desplan=xd.nextInt();
+             if(desplan == 2){
+               cic = false;
+           }
+        }
+        
+        ArrayList<Administrativo> ListaAdministrativo = new ArrayList();
+        boolean ci=true;
+        int decisionadmin =1;
+        while(ci){
+        String tipodocumento,documento,nombre,apellido,cargo,fechacontrato;
+        int edad;
+        boolean activo =true;
+        System.out.println("ingrese un administrativo");
+           System.out.println("");
+            System.out.println("digite tipo de documento");
+            tipodocumento=xd.next();
+            System.out.println("digete documento");
+            documento=xd.next();
+            System.out.println("digite nombre");
+            nombre=xd.next();
+            System.out.println("digite apelido");
+            apellido=xd.next();
+            System.out.println("digite edad");
+            edad=xd.nextInt();
+            System.out.println("digite el cargo");
+            cargo=xd.next();
+            System.out.println("digite la fecha de contrato");
+            fechacontrato=xd.next();
+                ListaAdministrativo.add(new Administrativo(tipodocumento, documento, apellido, nombre, edad, activo, cargo, fechacontrato));
+            
+          System.out.println("¿desea agrgar un administrativo mas? 1)si 2)no");
+            decisionadmin=xd.nextInt();
+             if(decisionadmin == 2){
+               ci = false;
+           }
+        }
+        
+        for(int i =0; i<listaAlumnos.size(); i++){
+           System.out.println(listaAlumnos.get(i).mostrar());          
+        }
+        System.out.println("lista de docentes catedraticos"); 
+        for(int x=0;x<ListaCatedra.size();x++){
+         System.out.println(ListaCatedra.get(x).mostrar());
+        }
+        System.out.println("lista de docentes de planta");
+        for(int y=0;y<ListaPlanta.size();){
+        System.out.println(ListaPlanta.get(y).mostrar());
+        }
+        System.out.println("lista de docentes de administrativos");
+        for(int z=0;z<ListaAdministrativo.size();){
+        System.out.println(ListaAdministrativo.get(z).mostrar());
+         }
+        int b;
+        System.out.println("desea modificar algo");
+        System.out.println("1)alumno");
+        System.out.println("2)docente catedratico");
+        System.out.println("3)docente de planta");
+        System.out.println("4)administrativo");
+        b=xd.nextInt();
+        switch(b){
+            case 1:
+                
+               break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+        }
         
     }
     

@@ -1,9 +1,7 @@
 package universidad;
+//Mauricio Veregara
+//Andres Olivero
 
-/**
- *
- * @author cymaniatico
- */
 public class Catedratico extends Docente{
     
     private String fechaInicio, fechaFin;

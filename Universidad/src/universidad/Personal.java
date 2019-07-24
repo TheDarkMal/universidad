@@ -1,9 +1,6 @@
+//Mauricio Vergara
+//Andres Olivero
 package universidad;
-
-/**
- *
- * @author cymaniatico
- */
 public abstract class Personal {
     
     protected String tipoDocumento, documento, apellidos, nombres;

@@ -1,9 +1,6 @@
 package universidad;
-
-/**
- *
- * @author cymaniatico
- */
+//Mauricio Veregara
+//Andres Olivero
 public class Planta extends Docente{
 
     private String fechaContrato;
